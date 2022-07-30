@@ -41,7 +41,6 @@ function Recommendations() {
     async function load() {
       try {
         const p = await api.products(page);
-        console.log(p);
         if (!totalPages) setTotalPages(p.totalPages);
         setProducts(p.items);
         setLoading(false);
