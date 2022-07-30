@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const HeaderContainer = styled.header`
   display:flex;
   padding: 1rem;
-  //background-color: #c81a78;
   background:transparent;
   justify-content: space-around;
   align-items: center;
@@ -22,8 +21,10 @@ export const HeaderNav = styled.nav`
   display:flex;
   ul {
     display: flex;
-    background-color: yellow;
+    background-color: #f08cc1;
     justify-content: space-between;
+    border-radius:8px;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
     align-items: center;
     padding: 1rem;
     gap: 2rem;

@@ -4,6 +4,7 @@ import logo from '../../images/wine.svg';
 import lupa from '../../images/lupa.svg';
 import avatar from '../../images/avatar.svg';
 import sacola from '../../images/sacola.svg';
+import heart from '../../images/heart.svg';
 
 const Header = () => (
   <HeaderContainer>
@@ -25,6 +26,7 @@ const Header = () => (
       <img height="40px" src={ lupa } alt="" />
       <img height="40px" src={ avatar } alt="" />
       <img height="40px" src={ sacola } alt="" />
+      <img height="40px" src={ heart } alt="" />
     </HeaderIcons>
   </HeaderContainer>
 );
