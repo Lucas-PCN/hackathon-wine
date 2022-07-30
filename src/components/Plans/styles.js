@@ -3,7 +3,7 @@ import planBanner from '../../images/bg.png';
 
 export const PlansContainer = styled.section`
   display: flex;
-  padding: 1rem;
+  padding: 1rem 0;
   background-image: url(${planBanner});
   background-repeat: no-repeat;
   background-size: 100%;
