@@ -1,9 +1,61 @@
 import styled from 'styled-components';
+import planBanner from '../../images/bg.png';
 
 export const PlansContainer = styled.section`
   display: flex;
+  padding: 1rem;
+  background-image: url(${planBanner});
+  background-repeat: no-repeat;
+  background-size: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
 `;
-export const Banner2 = styled.section`
-background: red;
- background-image: url('../../images/banner.webp');
+export const PlansCard = styled.section`
+  padding: 1rem;
+  gap:1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+`;
+export const PlansCardHeader = styled.section`
+  display: flex;
+  align-items: end;
+  gap:0.2rem;
+  justify-content: space-between;
+  .card-plan-promotion {
+    background-color: #F79552;
+    height:max-content;
+    padding: 0 0.5rem;
+    border-radius:16px;
+    color: white;
+    font-size: 20px;
+  }
+
+`;export const PlansCardBody = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+
+`;export const PlansCardFooter = styled.section`
+  
+  button {
+    padding:  0.5rem 2.5rem;
+    font-size: 1rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    background-color: #7EBC43;
+    color: white;
+    font-weight: 700;
+    border-radius:16px;
+  }
+
 `;
