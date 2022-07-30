@@ -1,15 +1,14 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
-  display:flex;
-  padding: 1rem;
-  background:transparent;
-  justify-content: space-around;
   align-items: center;
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
+  display: flex;
+  justify-content: space-around;
+  left: 0;
+  padding: 1rem;
+  position: fixed;
+  right: 0;
+  top: 0;
   
   img {
     width:150px
@@ -17,19 +16,22 @@ export const HeaderContainer = styled.header`
 `;
 
 export const HeaderLogo = styled.img``;
+
 export const HeaderNav = styled.nav`
   display:flex;
+
   ul {
-    display: flex;
+    align-items: center;
     background-color: #f08cc1;
-    justify-content: space-between;
     border-radius:8px;
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-    align-items: center;
-    padding: 1rem;
+    display: flex;
     gap: 2rem;
+    justify-content: space-between;
+    padding: 1rem;
+
     li {
-        cursor:pointer;
+      cursor: pointer;
       list-style-type: none;
     }
   }
@@ -37,9 +39,10 @@ export const HeaderNav = styled.nav`
 
 export const HeaderIcons = styled.div`
   display: flex;
-  gap:2rem;
+  gap: 2rem;
+
   img {
-    cursor:pointer;
+    cursor: pointer;
     width: max-content;
   }
 `;
