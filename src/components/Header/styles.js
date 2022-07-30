@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
   align-items: center;
+  background-color: ${({ elevated }) => (elevated ? 'white' : 'transparent')};
+  box-shadow: ${({ elevated }) => (
+    elevated && '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)')};
   display: flex;
   justify-content: space-around;
   left: 0;
@@ -9,6 +12,8 @@ export const HeaderContainer = styled.header`
   position: fixed;
   right: 0;
   top: 0;
+  transition-duration: 500ms;
+  z-index: 1;
   
   img {
     width:150px
