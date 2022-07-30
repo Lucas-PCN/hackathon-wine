@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import bannerImage from '../../images/wineHome.jpg';
+import bannerImage from '../../images/banner2.png';
 
 export const BannerContainer = styled.section`
 
