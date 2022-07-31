@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   PlansContainer,
   PlansCard,
@@ -7,75 +7,76 @@ import {
   PlansCardFooter,
 } from './styles';
 
+import wines from '../../images/winesSection.png';
+import api from '../../services/api';
+
 export default function Plans() {
+  const [plans, setPlans] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function load() {
+      try {
+        const modalities = await api.modalities();
+        setPlans(modalities.plans);
+        setLoading(false);
+      } catch (err) {
+        console.warn(err);
+      }
+    }
+
+    setLoading(true);
+    load();
+  }, []);
+
+  if (loading) return null;
+
   return (
     <PlansContainer>
-      <PlansCard>
-        <PlansCardHeader>
-          <div className="card-plan-name">
-            <span>Plano</span>
-            <h3>Anual</h3>
-          </div>
-          <div className="card-plan-promotion">
-            <h3>4 MESES OFF</h3>
-          </div>
-        </PlansCardHeader>
-        <PlansCardBody>
-          <p>
-            De
-            <span>R$ 99,90</span>
-            por
-          </p>
-          <h2>
-            R$
-            <span>65,93</span>
-            /mês
-          </h2>
+      <img src={ wines } alt="vinhos" />
+      {plans.map((plan) => (
+        <PlansCard key={ plan.id }>
+          <PlansCardHeader>
+            <div className="card-plan-name">
+              <span>{plan.name.split(' ')[0]}</span>
+              <h3>{plan.name.split(' ')[1]}</h3>
+            </div>
 
-          <div>
-            2 taças de cristal
-          </div>
-        </PlansCardBody>
-        <PlansCardFooter>
-          <button type="button">
-            Assinar Anual
-          </button>
+            <div className="card-plan-promotion">
+              <h3>{plan.promotion}</h3>
+            </div>
+          </PlansCardHeader>
+          <PlansCardBody>
+            <p>
+              De
+              {' '}
+              <span>
+                {plan.price
+                  .toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}
+              </span>
+              {' '}
+              por
+            </p>
+            <h2>
+              {plan.priceWithDiscount
+                .toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}
+              /mês
+            </h2>
 
-        </PlansCardFooter>
-      </PlansCard>
-      <PlansCard>
-        <PlansCardHeader>
-          <div className="card-plan-name">
-            <span>Plano</span>
-            <h3>Anual</h3>
-          </div>
-          <div className="card-plan-promotion">
-            <h3>4 MESES OFF</h3>
-          </div>
-        </PlansCardHeader>
-        <PlansCardBody>
-          <p>
-            De
-            <span>R$ 99,90</span>
-            por
-          </p>
-          <h2>
-            R$
-            <span>65,93</span>
-            /mês
-          </h2>
+            <div>
+              {plan.gift || 'nenhum brinde'}
+            </div>
+          </PlansCardBody>
+          <PlansCardFooter>
+            <button type="button">
+              Assinar
+              {' '}
+              {plan.name.split(' ')[1]}
+            </button>
 
-          <div>
-            2 taças de cristal
-          </div>
-        </PlansCardBody>
-        <PlansCardFooter>
-          <button type="button">
-            Assinar Anual
-          </button>
-
-        </PlansCardFooter>
-      </PlansCard>
+          </PlansCardFooter>
+        </PlansCard>
+      ))}
     </PlansContainer>
   );
 }

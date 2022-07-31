@@ -24,6 +24,26 @@ export const RecommendationCard = styled.div`
   flex-direction: column;
   padding: 16px;
   width: 230px;
+  position: relative;
+
+  div.feedback-container {
+    align-items: center;
+    display: flex;
+    right: 12px;
+    top: 12px;
+    position: absolute;
+  }
+
+  div.feedback-container > span {
+    color: gray;
+    font-size: 0.8em;
+    margin-top: 0;
+    margin-right: 1px;
+  }
+
+  .feedback-label:last-of-type {
+    margin-left: 8px;
+  }
 
   img {
     height: 150px;
