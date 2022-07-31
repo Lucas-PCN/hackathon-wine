@@ -3,10 +3,13 @@ import React, { useCallback, useEffect, useState } from 'react';
 import Loader from 'react-js-loader';
 
 import {
+  AnnotationIcon,
   HeartIcon,
   ChevronDoubleLeftIcon,
   ChevronDoubleRightIcon,
 } from '@heroicons/react/outline';
+
+import { StarIcon } from '@heroicons/react/solid';
 
 import {
   Title,
@@ -41,6 +44,7 @@ function Recommendations() {
     async function load() {
       try {
         const p = await api.products(page);
+        console.log(p);
         if (!totalPages) setTotalPages(p.totalPages);
         setProducts(p.items);
         setLoading(false);
@@ -73,6 +77,22 @@ function Recommendations() {
         {isLoading ? <Loader bgColor={ theme.tertiary } type="spinner-cub" /> : (
           products.map((product) => (
             <RecommendationCard key={ product.id }>
+
+              <div className="feedback-container">
+                {product.rating !== 0 && product.rating !== undefined && (
+                  <>
+                    <span className="feedback-label">{product.rating}</span>
+                    <StarIcon color="gold" width={ 20 } />
+                  </>
+                )}
+
+                {product.avaliations !== 0 && product.avaliations !== undefined && (
+                  <>
+                    <span className="feedback-label">{product.avaliations}</span>
+                    <AnnotationIcon color="gray" width={ 20 } />
+                  </>
+                )}
+              </div>
 
               <img src={ product.image } alt={ product.name } />
 
