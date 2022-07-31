@@ -9,7 +9,6 @@ import Wineshare from '../../components/Wineshare';
 function Home() {
   return (
     <>
-
       <Header />
       <Banner />
       <Plans />
