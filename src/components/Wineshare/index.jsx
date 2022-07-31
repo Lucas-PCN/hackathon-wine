@@ -36,7 +36,6 @@ export default function Wineshare() {
             <p>Com o wineshare você e seus amigos podem brindar essa nova experiência.</p>
           </div>
           <div className="wineshare-text">
-
             <h1>Explore o Wineverso!</h1>
             <p>Saiba com o que seus amigos estão harmonizando um bom vinho.</p>
           </div>

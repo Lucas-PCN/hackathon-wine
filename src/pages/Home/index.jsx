@@ -5,6 +5,7 @@ import Banner from '../../components/Banner';
 import Plans from '../../components/Plans';
 import Recommendations from '../../components/Recommendations';
 import Wineshare from '../../components/Wineshare';
+import Footer from '../../components/Footer';
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
       <Plans />
       <Recommendations />
       <Wineshare />
+      <Footer />
       <VLibras forceOnload />
     </>
   );
