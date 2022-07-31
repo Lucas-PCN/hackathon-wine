@@ -11,7 +11,7 @@ export const RecommendationContainer = styled.section`
   gap: 1rem;
   justify-content: space-between;
   padding: 20px;
-  margin-bottom: 200px;
+  margin-bottom: 40px;
 `;
 
 export const RecommendationCardsContainer = styled.div`
