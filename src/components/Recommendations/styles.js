@@ -20,6 +20,8 @@ export const RecommendationCardsContainer = styled.div`
   overflow: auto;
   gap: 1rem;
   justify-content: center;
+  padding: 20px;
+  height: 448px;
   width: calc(100vw - 168px);
 `;
 
