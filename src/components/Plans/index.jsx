@@ -33,6 +33,7 @@ export default function Plans() {
 
   return (
     <PlansContainer>
+      <h1 className="title">WineBox</h1>
       <img src={ wines } alt="vinhos" />
       {plans.map((plan) => (
         <PlansCard key={ plan.id }>

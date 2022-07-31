@@ -9,11 +9,20 @@ export const PlansContainer = styled.section`
   background-size: 100%;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
   width: 100%;
 
   img {
     margin: -16px 80px -16px 0;
+  }
+
+  .title {
+    color: #fff;
+    font-size: 2rem;
+    margin: 30px 0;
+    text-align: center;
+    width: 100%;
   }
 `;
 
