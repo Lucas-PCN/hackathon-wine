@@ -20,8 +20,6 @@ export const HeaderContainer = styled.header`
   }
 `;
 
-export const HeaderLogo = styled.img``;
-
 export const HeaderNav = styled.nav`
   display:flex;
 

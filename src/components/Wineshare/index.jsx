@@ -16,7 +16,7 @@ export default function Wineshare() {
             Baixe
             {' '}
             o
-            <span> app wine</span>
+            <span> app Wine</span>
             !
           </h1>
         </div>
@@ -28,12 +28,14 @@ export default function Wineshare() {
         <div className="wineshare-functions">
           <div className="wineshare-text">
             <h1>Compartilhe momentos!</h1>
-            <p>A nova funcionalidade permite compartilhar fotos e videos no feed wine.</p>
+            <p>A nova funcionalidade permite compartilhar fotos e vídeos no feed wine.</p>
           </div>
           <div className="wineshare-text">
 
             <h1>Misture paixões!</h1>
-            <p>Com o wineshare você e seus amigos podem brindar essa nova experiência.</p>
+            <p>
+              Com o WineShare você e seus amigos podem brindar a essa nova experiência.
+            </p>
           </div>
           <div className="wineshare-text">
             <h1>Explore o Wineverso!</h1>

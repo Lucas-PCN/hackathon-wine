@@ -24,7 +24,7 @@ function Header() {
 
   return (
     <HeaderContainer elevated={ elevated }>
-      <a href="http://wine.com.br">
+      <a href="http://wine.com.br" target="_blank" rel="noreferrer">
         {' '}
         <img src={ logo } alt="" />
       </a>
