@@ -14,6 +14,15 @@ export const RecommendationContainer = styled.section`
   margin-bottom: 200px;
 `;
 
+export const RecommendationCardsContainer = styled.div`
+  align-items: center;
+  display: flex;
+  overflow: auto;
+  gap: 1rem;
+  justify-content: center;
+  width: calc(100vw - 168px);
+`;
+
 export const RecommendationCard = styled.div`
   align-items: center;
   background-color: #fff;
